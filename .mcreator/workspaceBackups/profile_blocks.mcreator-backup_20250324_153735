@@ -1,0 +1,75 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "YTProfiles",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "yt_profiles",
+      "path": "~/Youtube"
+    },
+    {
+      "name": "GithubProfiles",
+      "type": "tab",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "github_profiles",
+      "path": "~/Github"
+    },
+    {
+      "name": "YoutubeBlock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "youtube_block",
+      "path": "~/Youtube"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "itemGroup.tabyt_profiles": "Youtube - Profile Blocks",
+      "itemGroup.tabgithub_profiles": "Github Profiles",
+      "tile.youtube_block.name": "Youtube Block"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Youtube",
+        "children": []
+      },
+      {
+        "name": "Github",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "profile_blocks",
+    "modName": "Profile Blocks",
+    "version": "1.0.0",
+    "author": "fijia, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.12.2",
+    "modElementsPackage": "net.hach.profileblocks",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

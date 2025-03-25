@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Youtube - Profile Blocks",
+    "icon": {
+      "value": "CUSTOM:YoutubeBlock"
+    },
+    "showSearch": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "normal": {
+      "model": "profile_blocks:github_block"
+    }
+  }
+}

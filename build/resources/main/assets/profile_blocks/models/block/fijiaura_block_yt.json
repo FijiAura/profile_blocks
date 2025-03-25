@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "profile_blocks:blocks/channels4_profile",
+    "particle": "profile_blocks:blocks/channels4_profile"
+  }
+}

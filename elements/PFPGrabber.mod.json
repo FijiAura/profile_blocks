@@ -1,0 +1,113 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "PFP Grabber",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "PFP Grabber",
+          "x": 184,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:YoutubeBlock"
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #1",
+          "x": 132,
+          "y": 61
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:GithubBlock"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #2",
+          "x": 132,
+          "y": 86
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #3",
+          "x": 276,
+          "y": 61
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": false,
+          "name": "Slot #4",
+          "x": 276,
+          "y": 86
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "YT Username",
+          "width": 120,
+          "height": 20,
+          "name": "UsernameYT",
+          "x": 153,
+          "y": 60
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Github username",
+          "width": 120,
+          "height": 20,
+          "name": "UsernameGithub",
+          "x": 153,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "doesn't work yet :(",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "doesn't work yet :(",
+          "x": 164,
+          "y": 107
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "profile_blocks:blocks/pfpmakerbottom",
+    "up": "profile_blocks:blocks/pfpmakertop",
+    "north": "profile_blocks:blocks/pfpmakersides",
+    "east": "profile_blocks:blocks/pfpmakersides",
+    "south": "profile_blocks:blocks/pfpmakersides",
+    "west": "profile_blocks:blocks/pfpmakersides",
+    "particle": "profile_blocks:blocks/pfpmakerbottom"
+  }
+}
