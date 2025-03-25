@@ -105,27 +105,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "profile_grabber"
-    },
-    {
-      "name": "PfpgYtGrab",
-      "type": "procedure",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pfpg_yt_grab",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
@@ -197,7 +176,6 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "modPicture": "mod_logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

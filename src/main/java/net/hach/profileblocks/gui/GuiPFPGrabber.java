@@ -25,6 +25,7 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.GuiButton;
 
+import net.hach.profileblocks.procedure.ProcedurePfpgYtGrab;
 import net.hach.profileblocks.block.BlockYoutubeBlock;
 import net.hach.profileblocks.block.BlockGithubBlock;
 import net.hach.profileblocks.ProfileBlocksMod;
@@ -65,25 +66,32 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 			TileEntity ent = world.getTileEntity(new BlockPos(x, y, z));
 			if (ent instanceof IInventory)
 				this.internal = (IInventory) ent;
-			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 7, 25) {
+			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 6, 28) {
+				@Override
+				public ItemStack onTake(EntityPlayer entity, ItemStack stack) {
+					ItemStack retval = super.onTake(entity, stack);
+					GuiContainerMod.this.slotChanged(1, 1, 0);
+					return retval;
+				}
+
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(BlockYoutubeBlock.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 7, 50) {
+			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 6, 51) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(BlockGithubBlock.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(3, this.addSlotToContainer(new Slot(internal, 3, 151, 25) {
+			this.customSlots.put(3, this.addSlotToContainer(new Slot(internal, 3, 168, 28) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(4, this.addSlotToContainer(new Slot(internal, 4, 151, 50) {
+			this.customSlots.put(4, this.addSlotToContainer(new Slot(internal, 4, 168, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -93,9 +101,9 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlotToContainer(new Slot(player.inventory, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
+					this.addSlotToContainer(new Slot(player.inventory, sj + (si + 1) * 9, 8 + 8 + sj * 18, 13 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlotToContainer(new Slot(player.inventory, si, 0 + 8 + si * 18, 0 + 142));
+				this.addSlotToContainer(new Slot(player.inventory, si, 8 + 8 + si * 18, 13 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -251,8 +259,8 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 			this.y = y;
 			this.z = z;
 			this.entity = entity;
-			this.xSize = 176;
-			this.ySize = 166;
+			this.xSize = 192;
+			this.ySize = 192;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("profile_blocks:textures/pfp_grabber.png");
 		@Override
@@ -270,6 +278,10 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.drawModalRectWithCustomSizedTexture(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			zLevel = 100.0F;
+			this.mc.renderEngine.bindTexture(new ResourceLocation("profile_blocks:textures/yt_logo.png"));
+			this.drawModalRectWithCustomSizedTexture(this.guiLeft + 26, this.guiTop + 29, 0, 0, 14, 14, 14, 14);
+			this.mc.renderEngine.bindTexture(new ResourceLocation("profile_blocks:textures/github_logo.png"));
+			this.drawModalRectWithCustomSizedTexture(this.guiLeft + 26, this.guiTop + 51, 0, 0, 14, 14, 14, 14);
 		}
 
 		@Override
@@ -299,10 +311,12 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-			this.fontRenderer.drawString("PFP Grabber", 58, 7, -12829636);
+			this.fontRenderer.drawString("PFP Grabber", 68, 5, -12829636);
 			UsernameYT.drawTextBox();
 			UsernameGithub.drawTextBox();
-			this.fontRenderer.drawString("doesn't work yet :(", 38, 70, -12829636);
+			this.fontRenderer.drawString("(tbh i don't know what i 'm doing)", 10, 15, -12829636);
+			this.fontRenderer.drawString("bc of my bad coding, you have to put", 5, 69, -12829636);
+			this.fontRenderer.drawString("github/yt blocks AFTER entering text.", 3, 80, -12829636);
 		}
 
 		@Override
@@ -314,18 +328,18 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 		@Override
 		public void initGui() {
 			super.initGui();
-			this.guiLeft = (this.width - 176) / 2;
-			this.guiTop = (this.height - 166) / 2;
+			this.guiLeft = (this.width - 192) / 2;
+			this.guiTop = (this.height - 192) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			UsernameYT = new GuiTextField(0, this.fontRenderer, 27, 23, 120, 20);
+			UsernameYT = new GuiTextField(0, this.fontRenderer, 42, 26, 120, 20);
 			guistate.put("text:UsernameYT", UsernameYT);
 			UsernameYT.setMaxStringLength(32767);
-			UsernameYT.setText("YT Username");
-			UsernameGithub = new GuiTextField(1, this.fontRenderer, 27, 48, 120, 20);
+			UsernameYT.setText("");
+			UsernameGithub = new GuiTextField(1, this.fontRenderer, 42, 48, 120, 20);
 			guistate.put("text:UsernameGithub", UsernameGithub);
 			UsernameGithub.setMaxStringLength(32767);
-			UsernameGithub.setText("Github username");
+			UsernameGithub.setText("");
 		}
 
 		@Override
@@ -447,5 +461,13 @@ public class GuiPFPGrabber extends ElementsProfileBlocksMod.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 1 && changeType == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("guistate", guistate);
+				ProcedurePfpgYtGrab.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

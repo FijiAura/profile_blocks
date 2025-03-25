@@ -115,16 +115,19 @@
       "ids": {},
       "registry_name": "pfpg_yt_grab",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
+        "dependencies": []
+      }
+    },
+    {
+      "name": "PfpYTList",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pfp_yt_list",
+      "metadata": {
+        "dependencies": []
       }
     }
   ],
@@ -197,7 +200,6 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "modPicture": "mod_logo",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],

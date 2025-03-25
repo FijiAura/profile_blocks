@@ -105,6 +105,27 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "profile_grabber"
+    },
+    {
+      "name": "PfpgYtGrab",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pfpg_yt_grab",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -113,9 +134,9 @@
     "en_us": {
       "tile.github_block.name": "Github Block",
       "tile.fijiaura_block_yt.name": "Fijiaura Block",
-      "itemGroup.tabyt_profiles": "Youtube - Profile Blocks",
+      "itemGroup.tabyt_profiles": "Youtube PFPs",
       "tile.profile_grabber.name": "Profile Grabber",
-      "itemGroup.tabgithub_profiles": "Github Profiles",
+      "itemGroup.tabgithub_profiles": "Github PFPs",
       "tile.youtube_block.name": "Youtube Block"
     }
   },
@@ -145,17 +166,35 @@
       },
       {
         "name": "Github",
-        "children": []
+        "children": [
+          {
+            "name": "A-G",
+            "children": []
+          },
+          {
+            "name": "H-N",
+            "children": []
+          },
+          {
+            "name": "O-Z",
+            "children": []
+          },
+          {
+            "name": "0-9 OR unicode",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "profile_blocks",
     "modName": "Profile Blocks",
-    "version": "1.0.0",
-    "author": "fijia, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "version": "0.0.1",
+    "description": "Have your PFP as a Block!",
+    "author": "Hach",
+    "websiteURL": "https://modrinth.com/project/profile-blocks",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -163,6 +202,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.12.2",
+    "credits": "everyone who has a pfp block",
     "modElementsPackage": "net.hach.profileblocks",
     "lockBaseModFiles": false
   },

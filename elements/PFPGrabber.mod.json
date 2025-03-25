@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 192,
+    "height": 192,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -19,8 +19,8 @@
             "falpha": 0.0
           },
           "name": "PFP Grabber",
-          "x": 184,
-          "y": 44
+          "x": 186,
+          "y": 29
         }
       },
       {
@@ -32,9 +32,12 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onTakenFromSlot": {
+            "name": "PfpgYtGrab"
+          },
           "name": "Slot #1",
-          "x": 132,
-          "y": 61
+          "x": 123,
+          "y": 51
         }
       },
       {
@@ -47,8 +50,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #2",
-          "x": 132,
-          "y": 86
+          "x": 123,
+          "y": 74
         }
       },
       {
@@ -58,8 +61,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #3",
-          "x": 276,
-          "y": 61
+          "x": 285,
+          "y": 51
         }
       },
       {
@@ -69,43 +72,89 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
           "name": "Slot #4",
-          "x": 276,
-          "y": 86
+          "x": 285,
+          "y": 73
         }
       },
       {
         "type": "textfield",
         "data": {
-          "placeholder": "YT Username",
+          "placeholder": "",
           "width": 120,
           "height": 20,
           "name": "UsernameYT",
-          "x": 153,
-          "y": 60
+          "x": 160,
+          "y": 50
         }
       },
       {
         "type": "textfield",
         "data": {
-          "placeholder": "Github username",
+          "placeholder": "",
           "width": 120,
           "height": 20,
           "name": "UsernameGithub",
-          "x": 153,
-          "y": 85
+          "x": 160,
+          "y": 72
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "doesn't work yet :(",
+          "text": "(tbh i don't know what i 'm doing)",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "doesn't work yet :(",
-          "x": 164,
-          "y": 107
+          "name": "(tbh i don't know what i 'm doing)",
+          "x": 128,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "yt_logo.png",
+          "use1Xscale": false,
+          "name": "yt_logo.png",
+          "x": 144,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "github_logo.png",
+          "use1Xscale": false,
+          "name": "github_logo.png",
+          "x": 144,
+          "y": 75
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "bc of my bad coding, you have to put",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "bc of my bad coding, you have to put",
+          "x": 123,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "github/yt blocks AFTER entering text.",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "github/yt blocks AFTER entering text.",
+          "x": 121,
+          "y": 104
         }
       }
     ]

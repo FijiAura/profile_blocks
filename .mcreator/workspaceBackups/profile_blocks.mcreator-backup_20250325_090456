@@ -1,5 +1,7 @@
 {
-  "id_map": {},
+  "id_map": {
+    "GUI": 1
+  },
   "mod_elements": [
     {
       "name": "YTProfiles",
@@ -50,6 +52,59 @@
       "ids": {},
       "registry_name": "fijiaura_block_yt",
       "path": "~/Youtube/A-G"
+    },
+    {
+      "name": "PFPGrabber",
+      "type": "gui",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 1
+      },
+      "registry_name": "pfp_grabber"
+    },
+    {
+      "name": "ProfileGrabberOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "profile_grabber_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProfileGrabber",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "profile_grabber"
     }
   ],
   "variable_elements": [],
@@ -58,8 +113,9 @@
     "en_us": {
       "tile.github_block.name": "Github Block",
       "tile.fijiaura_block_yt.name": "Fijiaura Block",
-      "itemGroup.tabyt_profiles": "Youtube - Profile Blocks",
-      "itemGroup.tabgithub_profiles": "Github Profiles",
+      "itemGroup.tabyt_profiles": "Youtube PFPs",
+      "tile.profile_grabber.name": "Profile Grabber",
+      "itemGroup.tabgithub_profiles": "Github PFPs",
       "tile.youtube_block.name": "Youtube Block"
     }
   },
@@ -89,17 +145,35 @@
       },
       {
         "name": "Github",
-        "children": []
+        "children": [
+          {
+            "name": "A-G",
+            "children": []
+          },
+          {
+            "name": "H-N",
+            "children": []
+          },
+          {
+            "name": "O-Z",
+            "children": []
+          },
+          {
+            "name": "0-9 OR unicode",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "profile_blocks",
     "modName": "Profile Blocks",
-    "version": "1.0.0",
-    "author": "fijia, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "version": "0.0.1",
+    "description": "Have your PFP as a Block!",
+    "author": "Hach",
+    "websiteURL": "https://modrinth.com/project/profile-blocks",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -107,6 +181,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.12.2",
+    "credits": "everyone who has a pfp block",
     "modElementsPackage": "net.hach.profileblocks",
     "lockBaseModFiles": false
   },
